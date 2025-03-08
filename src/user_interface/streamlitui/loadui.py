@@ -63,12 +63,13 @@ class LoadStreamlitUI:
             
             if "state" not in st.session_state:
                 st.session_state.state = self.initialize_session()
+        return self.user_controls
 
 
-
-if __name__ == "__main__":
-    a= LoadStreamlitUI()
-    a.load_streamlit_ui()
-    print(a.config.get_page_title())
+## UI testing code
+# if __name__ == "__main__":
+#     a= LoadStreamlitUI()
+#     a.load_streamlit_ui()
+#     print(a.config.get_page_title())
 
        
