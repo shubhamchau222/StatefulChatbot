@@ -9,7 +9,7 @@ class BasicChatbotNodes:
     def __init__(self, model):
         self.llm = model
     
-    def peocess(self, state: graphstate):
+    def process(self, state: graphstate):
         return {"messages":
                 self.llm.invoke(state["messages"])}
       

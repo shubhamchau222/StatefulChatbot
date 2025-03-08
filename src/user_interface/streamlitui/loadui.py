@@ -57,7 +57,7 @@ class LoadStreamlitUI:
             if self.user_controls["selected_usecase"] == 'Chatbot with Tool':
 
                 #ask for Tavily API key
-                self.user_controls["TAVILY_API_KEY"] = st.session_state["TAVILY_API_KEY"] = st.text_input("Enter your Tavily API Key", type="password")
+                os.environ["TAVILY_API_KEY"] = self.user_controls["TAVILY_API_KEY"]= st.session_state["TAVILY_API_KEY"] = st.text_input("Enter your Tavily API Key", type="password")
                 if not self.user_controls["TAVILY_API_KEY"]:
                     st.warning("⚠️ Please enter your TAVILTY API key to proceed. Don't have? refer : https://tavily.com/")
             
